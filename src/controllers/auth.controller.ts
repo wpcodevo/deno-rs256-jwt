@@ -44,14 +44,6 @@ const signUpUserController = async ({
       user,
     };
   } catch (error) {
-    if ((error.message as string).includes("E11000")) {
-      response.status = 409;
-      response.body = {
-        status: "fail",
-        message: "A user with that email already exists",
-      };
-      return;
-    }
     response.status = 500;
     response.body = { status: "error", message: error.message };
     return;
