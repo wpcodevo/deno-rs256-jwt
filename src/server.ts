@@ -14,7 +14,8 @@ router.get<string>("/api/healthchecker", (ctx: RouterContext<string>) => {
   ctx.response.status = 200;
   ctx.response.body = {
     status: "success",
-    message: "Welcome to Deno with MongoDB",
+    message:
+      "Welcome to JWT Authentication in Deno with Asymmetric Cryptography",
   };
 });
 
