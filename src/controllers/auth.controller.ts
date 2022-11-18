@@ -26,6 +26,16 @@ const signUpUserController = async ({
     }: { name: string; email: string; password: string } = await request.body()
       .value;
 
+    const userExists = users.find((user) => user.email === email);
+    if (userExists) {
+      response.status = 409;
+      response.body = {
+        status: "fail",
+        message: "User with that email already exists",
+      };
+      return;
+    }
+
     const createdAt = new Date();
     const updatedAt = createdAt;
     const user = {
