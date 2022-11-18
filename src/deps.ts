@@ -13,5 +13,5 @@ export {
   getNumericDate,
   verify,
 } from "https://deno.land/x/djwt@v2.7/mod.ts";
-export type { Header, Payload } from "https://deno.land/x/djwt@v2.7/mod.ts";
+export type { Header, Payload } from "https://deno.land/x/djwt@v2.8/mod.ts";
 export { config as dotenvConfig } from "https://deno.land/x/dotenv@v3.2.0/mod.ts";
